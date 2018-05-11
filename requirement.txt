@@ -1,0 +1,10 @@
+Django==1.10
+psycopg2
+PyPDF2==1.26.0
+beautifulsoup4==4.5.3
+selenium==2.53.6
+wkhtmltopdf==0.2
+
+
+
+
