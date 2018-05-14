@@ -25,7 +25,7 @@ SECRET_KEY = '^gqrsv@9x*pyt8^nyrjt&(7_^_qtp7tjq1funkr-_qcsw+757v'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['35.185.2.81']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -102,7 +102,7 @@ DATABASES = {
         'NAME': 'simpy',
         'USER': 'postgres',
         'PASSWORD': 'simpy1120',
-        'HOST': '35.185.2.81',
+        'HOST': 'localhost',
         'PORT': '5432',
     }
 }
