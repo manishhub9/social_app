@@ -1,4 +1,3 @@
-console.log('i am get called');
 $(document).on('click','#login_button', function(event){
 	event.preventDefault();
 

@@ -20,4 +20,5 @@ urlpatterns = [
     url(r'^', include('dashboard.urls')),
     url(r'^oauth/', include('social_django.urls', namespace='social')),
     url(r'^',include('howdy.urls')),
+    url(r'^',include('exchange.urls')),
 ]

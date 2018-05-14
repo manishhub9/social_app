@@ -25,7 +25,7 @@ SECRET_KEY = '^gqrsv@9x*pyt8^nyrjt&(7_^_qtp7tjq1funkr-_qcsw+757v'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['35.185.2.81']
 
 
 # Application definition
@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'dashboard',
     'howdy',
     'social_django',
+    'exchange',
     
 ]
 
@@ -98,10 +99,10 @@ WSGI_APPLICATION = 'first_project.wsgi.application'
 DATABASES = {
    'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'userdatabasename',
+        'NAME': 'simpy',
         'USER': 'postgres',
-        'PASSWORD': 'userpassword',
-        'HOST': 'localhost',
+        'PASSWORD': 'simpy1120',
+        'HOST': '35.185.2.81',
         'PORT': '5432',
     }
 }

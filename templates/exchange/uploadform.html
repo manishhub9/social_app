@@ -48,7 +48,7 @@
                 </button>
 
                 <ul class="nav navbar-nav navbar-left navbar-top-links">
-                    <li><a href="#"><i class="fa fa-home fa-fw"></i> Dashboard</a></li>
+                    <li><a href="#"><i class="fa fa-home fa-fw"></i> Upload</a></li>
                 </ul>
 
                 <ul class="nav navbar-right navbar-top-links">
@@ -145,7 +145,7 @@
                                 <a href="/exchange"><i class="fa fa-upload fa-fw"></i> Upload</a>
                             </li>
                             
-                            
+                           
                             
                             
                         </ul>
@@ -159,9 +159,21 @@
             <div id="page-wrapper">
                 <div class="container-fluid">
                     <div class="row">
+                        <form method="POST" action="/uploaddata/" enctype="multipart/form-data">
+                            {% csrf_token %}
                         <div class="col-lg-12">
-                            <h1 class="page-header">Blank</h1>
+                            <h1 class="page-header">Upload Form</h1>
                         </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                 <button type="button" class="btn btn-primary" id="openfile_dialog">Upload</button>
+                                <input type="file" id="csv_file" name="csv_file" accept=".csv" style="display: none">
+                                <button id="upload_bulk" name="upload_bulk" style="display: none"></button>
+                            </div>
+                        </div>
+                        </div>
+                      </form>
+
                         <!-- /.col-lg-12 -->
                     </div>
                     <!-- /.row -->
@@ -184,6 +196,9 @@
 
         <!-- Custom Theme JavaScript -->
         <script src="{% static "/js/startmin.js"%}"></script>
+        <script src="{% static "/ajax/uploadform.js"%}"></script>
+        <script src="{% static "ajax/csrf.js" %}"></script>
+
 
     </body>
 </html>
