@@ -11,11 +11,8 @@ def index(request):
 	return render(request,'exchange/uploadform.html')
 
 def upload_data(request):
-	print 'i m called'
-	print request.POST
 	fileData =  request.FILES.get('csv_file')
 	fileObject = fileData
-	print fileObject
 	csv_reader = csv.reader(fileObject,delimiter=',')
 
 	next(csv_reader) 
